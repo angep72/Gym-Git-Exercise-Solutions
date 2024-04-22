@@ -385,4 +385,91 @@ To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/bundle-2)
 $
 ```
+### Execise .2
+``` bash
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git pull
+Already up to date.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git branch 
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+  master
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
+$ git add service.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
+$ git commit -m "servicepage"
+[ft/service-redesign 4b7508b] servicepage
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 315 bytes | 157.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+   e13ec3d..4b7508b  ft/service-redesign -> ft/service-redesign
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
+$ git merge main 
+Auto-merging service.html
+CONFLICT (content): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign|MERGING)
+$ git merge main git add service.html
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign|MERGING)
+$  git add service.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign|MERGING)
+$ git commit -m "service conflict resiolved"
+[ft/service-redesign 289c763] service conflict resiolved
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
+$ git push 
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 227 bytes | 113.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+   4b7508b..289c763  ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
+```
+
  

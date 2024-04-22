@@ -1023,6 +1023,122 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
 ```
+### Bundle .4
+## exercise .1
+```bash 
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git remotes add git copy https://github.com/angep72/Gym-Git-Exercise-Solutions-2.git
+git: 'remotes' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git remote add git copy https://github.com/angep72/Gym-Git-Exercise-Solutions-2.git
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git remote add git copy https://github.com/angep72/Gym-Git-Exercise-Solutions-2.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git remote add git-copy https://github.com/angep72/Gym-Git-Exercise-Solutions-2.git
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git remote
+git-copy
+origin
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git add home.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git commit -m "helloworld"
+[main e15352b] helloworld
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 348 bytes | 174.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+   c6c30e1..e15352b  main -> main
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git push git copy 
+error: src refspec copy does not match any
+error: failed to push some refs to 'git'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git push git-copy 
+Enumerating objects: 44, done.
+Counting objects: 100% (44/44), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (44/44), 9.01 KiB | 838.00 KiB/s, done.
+Total 44 (delta 18), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (18/18), done.
+To https://github.com/angep72/Gym-Git-Exercise-Solutions-2.git
+ * [new branch]      main -> main
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git push origin
+Everything up-to-date
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git remote remove sl
+error: No such remote: 'sl'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$
+```
 
 
  

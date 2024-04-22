@@ -1140,5 +1140,177 @@ HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
 $
 ```
 
+### Bundle 4 
+## exercise .2
+``` bash 
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git checkout  -b ft/footer
+Switched to a new branch 'ft/footer'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/footer)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/footer)
+$ git commmit -m "footer"
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/footer)
+$ git commit -m "footer"
+[ft/footer c4ec379] footer
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/footer)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/footer)
+$ git commit -m "pages"
+On branch ft/footer
+nothing to commit, working tree clean
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/footer)
+$ git push 
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use     
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking  
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/footer)
+$ --set-upstream origin ft/footer
+bash: --set-upstream: command not found
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 4, done.
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/angep72/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git       
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$ git merge --squash ft/footer
+Updating 9e96dd9..c4ec379
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$ git log 
+commit 9e96dd9fefdd25cb3f10537a112493bf85bfed5e (HEAD -> ft/squashing, origin/main, main)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 19:23:40 2024 +0200
+
+    exercise
+
+commit e15352b9466ddbbcd602e8635ecf8f4356d9284f (git-copy/main)    
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 19:16:40 2024 +0200
+
+    helloworld
+
+commit c6c30e163d53c2ff6470edfee7c187a666fc5542
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 17:50:05 2024 +0200
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$ git commit -m "footer changes squashing "
+[ft/squashing 238f729] footer changes squashing
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$ git log 
+commit 238f729ac87263acc33aa49016223f4e7c12c7c9 (HEAD -> ft/squashing)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 22:23:38 2024 +0200
+
+    footer changes squashing
+
+commit 9e96dd9fefdd25cb3f10537a112493bf85bfed5e (origin/main, main)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 19:23:40 2024 +0200
+
+    exercise
+
+commit e15352b9466ddbbcd602e8635ecf8f4356d9284f (git-copy/main)    
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 19:16:40 2024 +0200
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$ git diff ft/squashing
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$ git checkout ft/squashing
+Already on 'ft/squashing'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$ git log
+commit 238f729ac87263acc33aa49016223f4e7c12c7c9 (HEAD -> ft/squashing)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 22:23:38 2024 +0200
+
+    footer changes squashing
+
+commit 9e96dd9fefdd25cb3f10537a112493bf85bfed5e (origin/main, main)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 19:23:40 2024 +0200
+
+    exercise
+
+commit e15352b9466ddbbcd602e8635ecf8f4356d9284f (git-copy/main)    
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 19:16:40 2024 +0200
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 438 bytes | 73.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/angep72/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
+$
+```
+
 
  

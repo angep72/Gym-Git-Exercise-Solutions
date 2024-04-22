@@ -115,3 +115,225 @@ Everything up-to-date
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (dev)
 $
  ```
+
+ ### Execise .2
+ ```bash
+ 
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git add home.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash
+Saved working directory and index state WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ stash list
+bash: stash: command not found
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash list
+stash@{0}: WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git list 
+git: 'list' is not a git command. See 'git --help'.
+
+The most similar commands are
+        bisect
+        rev-list
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash list 
+stash@{0}: WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git add about.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git status 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash
+Saved working directory and index state WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash list 
+stash@{0}: WIP on master: 71ceff4 first exercise
+stash@{1}: WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git add team.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash
+Saved working directory and index state WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash list
+stash@{0}: WIP on master: 71ceff4 first exercise
+stash@{1}: WIP on master: 71ceff4 first exercise
+stash@{2}: WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash pop stash@{1}
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (71b7a3fb57416d4fd49e4544056978ccd6cdba09)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash list 
+stash@{0}: WIP on master: 71ceff4 first exercise
+stash@{1}: WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash pop stash@{0}
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   team.html
+
+Dropped stash@{0} (3659eb6d3299004a3eacb4988d4712645fe4b185)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash 
+Saved working directory and index state WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash list 
+stash@{0}: WIP on master: 71ceff4 first exercise
+stash@{1}: WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash pop stash@{1}
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+Dropped stash@{1} (6fba24d2b508f6cc8de811f6d739b7a0b020344a)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git commit -m "changes on home and about"
+[master 0604529] changes on home and about
+ 1 file changed, 11 insertions(+)
+ create mode 100644 home.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 440 bytes | 220.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+   71ceff4..0604529  master -> master
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash list
+stash@{0}: WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash list
+stash@{0}: WIP on master: 71ceff4 first exercise
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash stash@{0}
+fatal: subcommand wasn't specified; 'push' can't be assumed due to unexpected token 'stash@{0}'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git stash pop stash@{0}
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   team.html
+
+Dropped stash@{0} (6c7af3d7640564b260fca2c6a83ae515aac6718e)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git reset --hard
+HEAD is now at 0604529 changes on home and about
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$
+```
+ 

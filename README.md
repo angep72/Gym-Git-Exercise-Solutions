@@ -1311,6 +1311,64 @@ To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/squashing)
 $
 ```
+### Bundle 5
+## EExercise 1 
+``` bash 
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git add index.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    home.html
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)     
+$ git commit -m "rename home to index"
+[main a9014ab] rename home to index
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)     
+$ git push 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 237 bytes | 237.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+   15d20dc..a9014ab  main -> main
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)     
+$ git push git-copy 
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 2.17 KiB | 739.00 KiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0  
+remote: Resolving deltas: 100% (5/5), completed with 2 local objects.
+To https://github.com/angep72/Gym-Git-Exercise-Solutions-2.git
+   e15352b..a9014ab  main -> main
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)     
+$
+```
 
 
  

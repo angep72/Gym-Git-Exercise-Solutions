@@ -336,7 +336,8 @@ HEAD is now at 0604529 changes on home and about
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
 $
 ```
- ### Execise .2
+ ## Bundle 2
+ ### Execise .1
  ```bash
  HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
 $ git checkout -b ft/bundle-2 

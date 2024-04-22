@@ -386,7 +386,7 @@ HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/bundle-2)
 $
 ```
 ##Bundle 3
-### Execise .2
+### Execise .1
 ``` bash
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
 $ git checkout main 
@@ -801,6 +801,227 @@ To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
 
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
 $
+```
+
+### Exercise 2
+``` bash
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git branch checkout -b ft/home-page-redesign
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
+   or: git branch [<options>] [-l] [<pattern>...]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --recurse-submodules  recurse through submodules
+    --format <format>     format to use for the output
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git branch -b ft/home-page-redesign
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
+   or: git branch [<options>] [-l] [<pattern>...]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --recurse-submodules  recurse through submodules
+    --format <format>     format to use for the output
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git commit -m "somechanges on home "
+[main 32d7e21] somechanges on home
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git push 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+   a44743a..32d7e21  main -> main
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git fetch origin main
+^C
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git fetch origin main 
+From https://github.com/angep72/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git rebase ft/home-page-redesign
+Current branch ft/home-page-redesign is up to date.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git rebase origin/main
+^C
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git rebase origin/main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git push origin your-branch-name --force
+^C
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.43 KiB | 1.43 MiB/s, done.
+Total 14 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/angep72/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git commit -m "home"
+[ft/home-page-redesign b2eef76] home
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git push 
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+   b910dcf..b2eef76  ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/home-page-redesign)
 ```
 
 

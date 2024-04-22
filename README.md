@@ -336,4 +336,52 @@ HEAD is now at 0604529 changes on home and about
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
 $
 ```
+ ### Execise .2
+ ```bash
+ HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (master)
+$ git checkout -b ft/bundle-2 
+Switched to a new branch 'ft/bundle-2'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   service.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/bundle-2)
+$ git add service.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/bundle-2)
+$ git commit -m "service page"
+[ft/bundle-2 c640a9b] service page
+ 1 file changed, 11 insertions(+)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 414 bytes | 103.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/angep72/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/bundle-2)
+$
+```
  

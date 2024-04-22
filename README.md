@@ -385,6 +385,7 @@ To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/bundle-2)
 $
 ```
+##Bundle 3
 ### Execise .2
 ``` bash
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
@@ -471,5 +472,336 @@ branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 
 HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/service-redesign)
 ```
+ 
+ ###Exercise 1:
+ ```bash 
+ 
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/team-page)
+$ git add team.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/team-page)
+$ git push 
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/angep72/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+M       team.html
+Your branch is up to date with 'origin/main'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git checkut -b ft/contact-page
+git: 'checkut' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ checkout -b ft/contact-page
+bash: checkout: command not found
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+M       team.html
+Your branch is up to date with 'origin/ft/team-page'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/team-page)
+$ git log
+commit 01ae7a25b2a343b862acfb07c942f9173edaf56a (HEAD -> ft/team-page, origin/main, origin/ft/team-page, main, ft/contact-page)
+commit 01ae7a25b2a343b862acfb07c942f9173edaf56a (HEAD -> ft/team-page, origin/main, origin/ft/team-page, main, ft/contact-page)
+Author: angep72 <p.umunyana@alustudent.com>
+commit 01ae7a25b2a343b862acfb07c942f9173edaf56a (HEAD -> ft/team-page, origin/main, origin/ft/team-page, main, ft/contact-page)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 16:10:15 2024 +0200
+
+    done with exercice bundle 2
+
+commit e0f3d6d3817f1d28c757c0581f2c02843c1c0c88
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 15:41:33 2024 +0200
+
+    services
+
+commit 18393c7d9c33b6c3ee58a0ec746037627d8bac54
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/team-page)
+$ git checkout -b ft/contact-page
+fatal: a branch named 'ft/contact-page' already exists
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+M       team.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page)
+$ git commit -m "contact page"
+[ft/contact-page a2913fe] contact page
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+ create mode 100644 contact.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page)
+$ git push 
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 497 bytes | 497.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/angep72/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page)
+$ git log
+commit a2913fe7cc53cf6baa1fa16d3cfe21d4ab0934bf (HEAD -> ft/contact-page, origin/ft/contact-page)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 16:48:46 2024 +0200
+
+    contact page
+
+commit 01ae7a25b2a343b862acfb07c942f9173edaf56a (origin/main, origin/ft/team-page, main, ft/team-page)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 16:10:15 2024 +0200
+
+    done with exercice bundle 2
+
+commit e0f3d6d3817f1d28c757c0581f2c02843c1c0c88
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page)
+$ git cherry-pick a2913fe7cc53cf6baa1fa16d3cfe21d4ab0934bf
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch ft/contact-page
+Your branch is up to date with 'origin/ft/contact-page'.
+
+You are currently cherry-picking commit a2913fe.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+nothing to commit, working tree clean
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page|CHERRY-PICKING)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page|CHERRY-PICKING)
+$ git commit -m "new changes in contact page "
+[ft/contact-page 0be6377] new changes in contact page
+ Date: Mon Apr 22 16:48:46 2024 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+   a2913fe..0be6377  ft/contact-page -> ft/contact-page
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git commit -m "faq page"
+[ft/faq-page 39d9a02] faq page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git push 
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 424 bytes | 424.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/angep72/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git log
+commit 39d9a02de780fb95f5fa6e716e8d56e0b78d7cff (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 16:57:40 2024 +0200
+
+    faq page
+
+commit 0be63775d330ae8df873779c0a6aad94d224a4a8 (origin/ft/contact-page, ft/contact-page)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 16:48:46 2024 +0200
+
+    new changes in contact page
+
+commit a2913fe7cc53cf6baa1fa16d3cfe21d4ab0934bf
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git revert a2913fe7cc53cf6baa1fa16d3cfe21d4ab0934bf
+CONFLICT (modify/delete): contact.html deleted in parent of a2913fe (contact page) and modified in HEAD.  Version HEAD of contact.html left in tree.
+error: could not revert a2913fe... contact page
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page|REVERTING)
+$ git log
+commit 39d9a02de780fb95f5fa6e716e8d56e0b78d7cff (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 16:57:40 2024 +0200
+
+    faq page
+
+commit 0be63775d330ae8df873779c0a6aad94d224a4a8 (origin/ft/contact-page, ft/contact-page)
+Author: angep72 <p.umunyana@alustudent.com>
+Date:   Mon Apr 22 16:48:46 2024 +0200
+
+    new changes in contact page
+
+commit a2913fe7cc53cf6baa1fa16d3cfe21d4ab0934bf
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page|REVERTING)
+$ git revert 0be63775d330ae8df873779c0a6aad94d224a4a8
+error: Reverting is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: revert failed
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page|REVERTING)
+$ git status
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+You are currently reverting commit a2913fe.
+  (fix conflicts and run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   team.html
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        deleted by them: contact.html
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page|REVERTING)
+$ git add contact.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page|REVERTING)
+$ git commit -m "resolved umerged"
+[ft/faq-page df126d5] resolved umerged
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+This reverts commit 0be63775d330ae8df873779c0a6aad94d224a4a8.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git revert 0be63775d330ae8df873779c0a6aad94d224a4a8
+^C
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ ^C
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ ^C
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git revert 0be63775d330ae8df873779c0a6aad94d224a4a8
+[ft/faq-page 61398a1] Revert "new changes in contact page"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 670 bytes | 670.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/angep72/Gym-Git-Exercise-Solutions.git
+   39d9a02..61398a1  ft/faq-page -> ft/faq-page
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/git-exercises (ft/faq-page)
+$
+```
+
 
  

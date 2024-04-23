@@ -1413,5 +1413,82 @@ HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (main)
 $
 ```
 
+### Bundle 6
+## exercise 1
+```bash
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (main)
+$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (main)        
+$ git add index.html
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (main)        
+$ git push 
+Everything up-to-date
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (main)        
+$ git commit -m"home to restaurant"
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threadsCompressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/angep72/git-cafe-exercise.git
+   d1d3f9c..7ebbc92  main -> main
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (main)
+$ git checkout -b feature_menu
+Switched to a new branch 'feature_menu'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (feature_menu)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (feature_menu)
+$ git commit -m "menu"
+[feature_menu 0df9fdc] menu
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (feature_menu)
+$ git push 
+fatal: The current branch feature_menu has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature_menu
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (feature_menu)
+$ git push --set-upstream origin feature_menu
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 317 bytes | 79.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'feature_menu' on GitHub by visiting:
+remote:      https://github.com/angep72/git-cafe-exercise/pull/new/feature_menu
+remote:
+To https://github.com/angep72/git-cafe-exercise.git
+ * [new branch]      feature_menu -> feature_menu
+branch 'feature_menu' set up to track 'origin/feature_menu'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (feature_menu)
+```
+
 
  

@@ -1489,6 +1489,51 @@ branch 'feature_menu' set up to track 'origin/feature_menu'.
 
 HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (feature_menu)
 ```
+### bundle 6 
+## Ex 2
+``` bash 
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (main)
+$ git checkout -b bug-fix
+Switched to a new branch 'bug-fix'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (bug-fix)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (bug-fix)
+$ git commit -m "bugs fix"
+[bug-fix 5021bf9] bugs fix
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (bug-fix)
+$ git push 
+fatal: The current branch bug-fix has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bug-fix
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (bug-fix)
+$ git push --set-upstream origin bug-fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 311 bytes | 77.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug-fix' on GitHub by visiting:
+remote:      https://github.com/angep72/git-cafe-exercise/pull/new/bug-fix
+remote:
+To https://github.com/angep72/git-cafe-exercise.git
+ * [new branch]      bug-fix -> bug-fix
+branch 'bug-fix' set up to track 'origin/bug-fix'.
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (bug-fix)
+```
 
 
  

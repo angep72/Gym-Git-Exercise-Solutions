@@ -1534,6 +1534,44 @@ branch 'bug-fix' set up to track 'origin/bug-fix'.
 
 HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (bug-fix)
 ```
+### Bundle 6 
+## exer 3
+```bash
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (main)
+$ git checkout -b phone_page
+Switched to a new branch 'phone_page'
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (phone_page)
+$ git add .
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (phone_page)
+$ git commit -m "my number changed"
+[phone_page 7494f59] my number changed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (phone_page)
+$ git push origin phone_page
+fatal: unable to access 'https://github.com/angep72/git-cafe-exercise.git/': Could not resolve host: github.com
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (phone_page)
+$ git push origin phone_page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 295 bytes | 73.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'phone_page' on GitHub by visiting:
+remote:      https://github.com/angep72/git-cafe-exercise/pull/new/phone_page
+remote:
+To https://github.com/angep72/git-cafe-exercise.git
+ * [new branch]      phone_page -> phone_page
+
+HP@DESKTOP-1CTEVNT MINGW64 ~/OneDrive/Desktop/git-cafe-exercise (phone_page)
+```
 
 
  
